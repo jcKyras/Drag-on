@@ -1,0 +1,439 @@
+/* 
+    Document   : layout
+    Created on : 17/09/2013, 09:13:33
+    Author     : Julio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body { 
+  background: #f0f0f0 url('images/bg.gif'); 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #313131;
+  font-size: 62.5%; 
+  line-height: 1; 
+}
+
+
+#topo{
+	width: 100%;
+	height: 200px;
+	margin: 0em auto;
+    background-position: right;
+	background:  #3292be;
+}
+
+#meio{
+    -width: 100%;
+    margin: 0em auto;
+    margin-bottom: 70px;
+    overflow: hidden;
+   - border: solid;
+}
+
+#segMenu{
+    width: 100%;
+    height: 42px;
+    background-color: #3292be;
+}
+
+nav{
+    width: 408px;
+    margin: 0em auto;
+    background-color: #fff; 
+    padding-left: 0px;
+
+    -webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #444;
+    position: fixed;
+   - overflow: visible;
+    bottom: 0;
+    color: #cacaca;
+    margin-top: 10px;
+}
+
+#segCubo{
+    
+    margin: 0em auto;
+    -border: solid;
+    -overflow: hidden;
+    -display: inherit;
+    -overflow: auto;
+    -float: none;
+    -position: inherit;;
+     width: auto;
+   word-wrap: break-word;
+}
+
+#segIntoCubo{
+    float: left;
+    width: 200px;
+    =border: solid;
+}
+#segTextCubo{
+    font-size: 0.8em;
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 90px;
+    width: 120px;
+    height: 100px;
+    float: right;
+    -border: solid;
+    -visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    transition-duration: 0.9s;
+
+}
+
+#imgImp{
+    width: 80px;
+    height: 80px;
+    float: left;
+    
+}
+
+.cubo{
+    width: 280px;
+    height: 300px;
+    padding: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -border: solid;
+    float: left;
+    background-color: #e4e4e4;
+    overflow: hidden;
+    margin: 20px;
+     -box-shadow: 0px 0px 10px;
+    border: solid #ccc 1px;
+    transition-duration: 1s;
+    --webkit-transform: rotateY(0deg);
+
+}
+
+.cubo:hover{
+    
+   background-color: #c0c9cd;
+  transition-duration: 0.4s;
+    
+
+
+}
+
+
+.cubo2{
+    width: 280px;
+    height: 300px;
+    padding: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -border: solid;
+    float: left;
+    background-color: #e4e4e4;
+    overflow: hidden;
+    margin: 20px;
+     -box-shadow: 0px 0px 10px;
+    border: solid #ccc 1px;
+    transition-duration: 1s;
+
+}
+
+.cubo2:hover{
+  
+background-color: #c0c9cd;
+  transition-duration: 0.4s;
+
+}
+
+
+.imgImp{
+    width: 120px;
+    height: 120px;
+    margin: 0em auto;
+    text-align: center;
+}
+
+#barra{
+    transition-duration: 1s;
+}
+
+
+#barra_Nome{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  top: -1%;
+  margin-right: 50px;
+  position: absolute;
+  right: 20%;
+  outline: 0;
+  border: 0;
+  color: #999;
+  text-decoration: none;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.0em;
+  -font-weight: bold;
+  padding: 15px 11px 11px 11px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  -cursor: pointer;
+  -text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 0 0 0 3px;
+  -moz-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+   transition-duration: 0.2s;
+}
+
+
+
+
+
+
+.flatbtn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  top: -1%;
+  position: absolute;
+  right: 20%;
+  outline: 0;
+  border: 0;
+  color: #999;
+  text-decoration: none;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.0em;
+  font-weight: bold;
+  padding: 15px 10px 10px 10px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+ 
+   transition-duration: 0.2s;
+}
+.flatbtn:hover {
+  color: #999;
+  background-color: #e7e7e7;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+.flatbtn:active {
+     text-decoration: none;
+}
+
+#modaltrigger{
+    text-decoration: none;
+}
+
+#modaltrigger_sair{
+  display: inline-block;
+  top: -1%;
+  position: absolute;
+  right: 20%;
+  outline: 0;
+  border: 0;
+  color: #999;
+  text-decoration: none;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.0em;
+  font-weight: bold;
+  padding: 15px 10px 11px 10px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 0 3 0 0px;
+  -moz-border-radius: 0 3 0 0px;
+  border-radius: 0 3 0 0px;
+ 
+   transition-duration: 0.2s;
+
+}
+
+#modaltrigger_sair:hover{
+  color: #999;
+  background-color: #e7e7e7;
+  text-decoration: none;
+  transition-duration: 0.2s;
+
+}
+
+/** custom login button **/
+.flatbtn-blu { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  width: 260px;
+  color: #edf4f9;
+  text-decoration: none;
+  background-color: #4f94cf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 12px 26px 12px 26px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+ 
+}
+.flatbtn-blu:hover {
+  color: #fff;
+  background-color: #519dde;
+}
+.flatbtn-blu:active {
+ 
+}
+
+
+/** modal window styles **/
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+
+#loginmodal {
+  width: 300px;
+  padding: 15px 20px;
+  background: #f3f6fa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+ 
+}
+
+#loginform { /* no default styles */ }
+
+#loginform label { display: block; font-size: 1.1em; font-weight: bold; color: #7c8291; margin-bottom: 3px; }
+
+
+.txtfield { 
+  display: block;
+  width: 100%;
+  padding: 6px 5px;
+  margin-bottom: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+  color: #7988a3;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#edf3f9), to(#fff));
+  background-image: -webkit-linear-gradient(top, #edf3f9, #fff);
+  background-image: -moz-linear-gradient(top, #edf3f9, #fff);
+  background-image: -ms-linear-gradient(top, #edf3f9, #fff);
+  background-image: -o-linear-gradient(top, #edf3f9, #fff);
+  background-image: linear-gradient(top, #edf3f9, #fff);
+  border: 1px solid;
+  border-color: #abbce8 #c3cae0 #b9c8ef;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+ 
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.txtfield:focus {
+  outline: none;
+  color: #525864;
+  border-color: #84c0ee;
+ 
+}
+
+.btn{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  width: 260px;
+  color: #edf4f9;
+  text-decoration: none;
+  background-color: #4f94cf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 12px 26px 12px 26px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0em auto;
+  transition-duration: 0.2s;
+}
+
+.btn:hover{
+   color: #999;
+  background-color: #e7e7e7;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+#seg_pag_medicao{
+  width: 400px;
+  margin: 0em auto;
+ - border: solid;
+}
+
+#seg_pag_medicao h1{
+ padding: 10px;
+ width: 100px;
+}

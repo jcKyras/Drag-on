@@ -1,0 +1,15 @@
+<?php
+/* Redirect browser */
+
+$url=$_SERVER['HTTP_HOST'];
+
+if (strpos($url,'10.94.0') !== false) {
+        header("Location: http://10.94.0.8/ocsreports/");
+} else {
+        header("Location: http://farim.ifrn.local/ocsreports/");
+}
+
+/* Make sure that code below does not get executed when we redirect. */
+exit;
+?>
+
