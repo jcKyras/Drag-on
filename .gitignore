@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#MacOS B*****t
+.DS_Store
+
+#sqlite db
+db.sqlite3
+
+#ignore backup files and folders
+*bak
