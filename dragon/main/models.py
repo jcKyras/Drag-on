@@ -12,6 +12,10 @@ class Impressora(models.Model):
     )
     online = models.BooleanField()
 
+    object = models.Manager()
+
 class ModeloImpressora(models.Model):
 
     nome = models.CharField(max_length=255, primary_key=True)
+
+    object = models.Manager()

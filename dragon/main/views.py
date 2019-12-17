@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Impressora
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    impressoras = Impressora.object.all()
+
+    contexto = {'impressoras': impressoras}
+
+    return render(request, 'index.html', contexto)
