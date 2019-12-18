@@ -137,5 +137,6 @@ db.sqlite3
 #ignore backup files and folders
 *bak
 
-#ignore migrations from app main
+#ignore migrations from app main, except __init__.py
 dragon/main/migrations/*
+!dragon/main/migrations/__init__.py
