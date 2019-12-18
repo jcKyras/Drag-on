@@ -1,7 +1,12 @@
 from django.contrib import admin
-from main.models import Impressora
-from main.models import ModeloImpressora 
+from main.models import * 
 
 # Register your models here.
 admin.site.register(Impressora)
 admin.site.register(ModeloImpressora)
+admin.site.register(Servidor)
+admin.site.register(Local)
+admin.site.register(Permissao)
+admin.site.register(Regra)
+admin.site.register(Grupo)
+
