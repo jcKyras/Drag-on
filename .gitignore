@@ -136,3 +136,6 @@ db.sqlite3
 
 #ignore backup files and folders
 *bak
+
+#ignore migrations from app main
+./dragon/main/migrations/*
