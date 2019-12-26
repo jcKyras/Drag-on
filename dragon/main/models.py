@@ -21,6 +21,16 @@ class Impressora(models.Model):
 
     object = models.Manager()
 
+
+class Medicao(models.Model):
+    data = models.DateField(primary_key=True)
+    contador = models.IntegerField()
+    impressora = models.ForeignKey(
+        'Impressora',
+        on_delete=models.CASCADE,
+    )
+
+
 class ModeloImpressora(models.Model):
 
     nome = models.CharField(max_length=255, primary_key=True)

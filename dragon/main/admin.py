@@ -3,6 +3,7 @@ from main.models import *
 
 # Register your models here.
 admin.site.register(Impressora)
+admin.site.register(Medicao)
 admin.site.register(ModeloImpressora)
 admin.site.register(Servidor)
 admin.site.register(Local)
