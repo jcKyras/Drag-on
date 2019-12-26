@@ -3,27 +3,28 @@
 {% block title %}Sistema Dragon - Principal{% endblock %}
 
 {% block content %}
-{% for impressora in impressoras %}
-    <h4>Nome: {{ impressora.nome }}</h4>
-    <p>Contador Geral de Impressões: {{ impressora.cont_impressoes }}</p>
-    <p>Número máximo de impressões: {{ impressora.cont_max_impressoes }}</p>
-    <p>Número de série: {{ impressora.numero_serie }}</p>
-    <p>Modelo: {{ impressora.modelo.nome }}</p>
-    {% if impressora.online %}
-        <p>Impressora Online</p>
-    {% else %}
-        <p>Impressora Offline</p>
-    {% endif %}
-    {% if impressora.operante %}
-        <p>Impressora Operante</p>
-    {% else %}
-        <p>Impressora Inoperante</p>
-    {% endif %}
-    {% if impressora.necessita_reparo %}
-        <p>Impressora Necessita de Reparo</p>
-    {% else %}
-        <p>Impressora em Funcionamento Normal</p>
-    {% endif %}
-    <br />
-{% endfor %}
+     <div id="banner">asdas</div>
+     <main>
+        <div id="conteudo">
+          
+                    
+        {% for impressora in impressoras %}
+
+                    <div class="blocoImpressora">
+                        <div class="text_count_imp">100/5000</div>
+                        <div class="segCircle">
+
+                            <div class="cp" id="a{{forloop.counter}}"></div>
+                                <script type="text/javascript">chamarGrafico(90, "#a{{forloop.counter}}");</script>      
+                                                    
+                        </div>
+                        <p>{{ impressora.nome }}</p>
+                    </div>
+
+   
+                                
+                    
+            {% endfor %}
+                </div>
+        </main>
 {% endblock %}
