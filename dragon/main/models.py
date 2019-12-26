@@ -23,12 +23,14 @@ class Impressora(models.Model):
 
 
 class Medicao(models.Model):
-    data = models.DateField(primary_key=True)
+    data = models.DateField()
     contador = models.IntegerField()
     impressora = models.ForeignKey(
         'Impressora',
         on_delete=models.CASCADE,
     )
+
+    object = models.Manager()
 
 
 class ModeloImpressora(models.Model):
@@ -77,3 +79,4 @@ class Grupo(models.Model):
     nome = models.CharField(max_length=255, primary_key=True)
 
     object = models.Manager()
+

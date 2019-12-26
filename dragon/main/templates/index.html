@@ -8,7 +8,7 @@
         <div id="conteudo">
           
                     
-        {% for impressora in impressoras %}
+        {% for medicao in medicoes %}
 
                     <div class="blocoImpressora">
                         <div class="text_count_imp">100/5000</div>
@@ -18,7 +18,7 @@
                                 <script type="text/javascript">chamarGrafico(90, "#a{{forloop.counter}}");</script>      
                                                     
                         </div>
-                        <p>{{ impressora.nome }}</p>
+                        <p>{{ medicao.impressora.nome }}</p>
                     </div>
 
    
