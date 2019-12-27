@@ -140,3 +140,5 @@ db.sqlite3
 #ignore migrations from app main, except __init__.py
 dragon/main/migrations/*
 !dragon/main/migrations/__init__.py
+
+.swp
