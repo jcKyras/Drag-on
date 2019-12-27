@@ -10,4 +10,5 @@ admin.site.register(Local)
 admin.site.register(Permissao)
 admin.site.register(Regra)
 admin.site.register(Grupo)
+admin.site.register(Driver)
 
