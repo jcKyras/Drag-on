@@ -1,5 +1,6 @@
 from django.db import models
 import sys
+import netsnmp
 
 class Driver(models.Model):
     
@@ -10,8 +11,28 @@ class Driver(models.Model):
 
     object = models.Manager()
 
+class SNMPDriver(Driver):
+    
+    def __init__(self, comunidade, oid):
+        self.comunidade = comunidade
+        self.oid = oid
+        self.versao = "2"
+
+    def obter_contador(impressora):
+        return int(netsnmp.snmpwalk(self.oid, Version=self.versao, DestHost=impressora.ip, Community=self.comunidade))
+        
+
+class AficioMP201(SNMPDriver):
+
+    def __init__(self):
+        super.__init__(comunidade="public", oid="1.3.6.1.4.1.367.3.2.1.2.19.1.0")
+    
+
 class DriverFactory:
 
     @staticmethod
     def fabricarDriver(impressora):
-        raise NotImplementedError("Not supported yet.");
+        este_arquivo = sys.modules[__name__]
+        driverClasse = getattr(este_arquivo, impressora.modelo.driver.nome)
+        driver = driverClasse()
+        return driver
