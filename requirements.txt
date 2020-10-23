@@ -1,4 +1,13 @@
 asgiref==3.2.3
 Django==3.0
+importlib-metadata==2.0.0
+ipaddress==1.0.23
+mock==4.0.2
+puresnmp==1.9.1
 pytz==2019.3
+six==1.15.0
 sqlparse==0.3.0
+t61codec==2.0.0
+typing==3.7.4.3
+verlib==0.1
+zipp==3.3.1

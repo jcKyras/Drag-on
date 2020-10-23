@@ -1,6 +1,6 @@
 from django.db import models
 import sys
-import netsnmp
+from puresnmp import get
 
 class Driver(models.Model):
     
@@ -19,17 +19,16 @@ class SNMPDriver(Driver):
         self.versao = "2"
 
     def obter_contador(impressora):
-        return int(netsnmp.snmpwalk(self.oid, Version=self.versao, DestHost=impressora.ip, Community=self.comunidade))
+        result = get(impressora.ip, self.comunidade, self.oid)
+        return int(result)
         
 
 class AficioMP201(SNMPDriver):
-
     def __init__(self):
         super.__init__(comunidade="public", oid="1.3.6.1.4.1.367.3.2.1.2.19.1.0")
     
 
 class DriverFactory:
-
     @staticmethod
     def fabricarDriver(impressora):
         este_arquivo = sys.modules[__name__]
