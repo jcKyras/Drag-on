@@ -1,17 +1,17 @@
 {% extends "base.html"  %}
+{% load custom_tags %}
 
 {% block title %}Sistema Dragon - Principal{% endblock %}
 
 {% block content %}
-     <div id="banner">asdas</div>
-     <main>
+<div id="banner">asdas</div>
+    <main>
         <div id="conteudo">
           
                     
-        {% for medicao in medicoes %}
-
+        {% for medicao in ultimas_medicoes %}
                     <div class="blocoImpressora">
-                        <div class="text_count_imp">100/5000</div>
+                        <div class="text_count_imp">{% calcula_contador_atual medicao %}/{{ medicao.impressora.cont_max_impressoes }}</div>
                         <div class="segCircle">
 
                             <div class="cp" id="a{{forloop.counter}}"></div>
@@ -21,10 +21,10 @@
                         <p>{{ medicao.impressora.nome }}</p>
                     </div>
 
-   
-                                
-                    
-            {% endfor %}
-                </div>
-        </main>
+        {% empty %}
+
+        <p> Para exibição do nível de consumo das impressoras, é necessário que seja feita pelo menos uma medição para a comparação dos números. Não há medições disponíveis. Contate o administrador.</p>
+        {% endfor %}
+        </div>
+    </main>
 {% endblock %}
