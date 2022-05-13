@@ -26,7 +26,7 @@ class Impressora(models.Model):
     operante = models.BooleanField(default=False)
     necessita_reparo = models.BooleanField(default=False)
 
-    object = models.Manager()
+    objects = models.Manager()
 
     def obter_contador_remoto(self):
         driver = DriverFactory.fabricarDriver(self)
@@ -45,7 +45,7 @@ class Medicao(models.Model):
         on_delete=models.PROTECT,
     )
 
-    object = models.Manager()
+    objects = models.Manager()
 
 class ModeloImpressora(models.Model):
 
@@ -59,7 +59,7 @@ class ModeloImpressora(models.Model):
         null=True,
     )
 
-    object = models.Manager()
+    objects = models.Manager()
 
 class Servidor(models.Model):
     
@@ -74,7 +74,7 @@ class Servidor(models.Model):
         null=True,
     )
 
-    object = models.Manager()
+    objects = models.Manager()
 
 class Local(models.Model):
 
@@ -83,7 +83,7 @@ class Local(models.Model):
 
     nome = models.CharField(max_length=255, primary_key=True)
     
-    object = models.Manager()
+    objects = models.Manager()
 
 class Permissao(models.Model):
 
@@ -93,7 +93,7 @@ class Permissao(models.Model):
     numero = models.IntegerField(primary_key=True)
     nome = models.CharField(max_length=50)
 
-    object = models.Manager()
+    objects = models.Manager()
 
 class Regra(models.Model):
 
@@ -116,5 +116,5 @@ class Grupo(models.Model):
 
     nome = models.CharField(max_length=255, primary_key=True)
 
-    object = models.Manager()
+    objects = models.Manager()
 
