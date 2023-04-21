@@ -3,6 +3,6 @@ backports.zoneinfo==0.2.1
 Django==4.0.4
 puresnmp==1.11.0
 six==1.16.0
-sqlparse==0.4.2
+sqlparse==0.4.4
 t61codec==2.0.0
 verlib==0.1
